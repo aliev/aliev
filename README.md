@@ -17,6 +17,13 @@ import asyncio
 from aioshutdown import SIGTERM, SIGINT, SIGHUP
 
 
+async def my_task(sleep: int):
+    try:
+        ...
+    except asyncio.CancelledError as exc:
+        # Your graceful shutdown logic here
+
+
 # The list of the signals, that you want to handle
 with SIGTERM | SIGHUP | SIGINT as loop:
     # The list of your tasks
