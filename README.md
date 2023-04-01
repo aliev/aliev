@@ -5,17 +5,21 @@
 🔭 I’m currently working on [aioauth-fastapi](https://github.com/aliev/aioauth-fastapi) demo server
 
 🤔 I’m looking for help with [documenting aioauth](https://github.com/aliev/aioauth)
-<!--
-**aliev/aliev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🔭 I created new library - [aioshutdown](https://github.com/aliev/aioshutdown) the context manager that provides simple graceful shutdown interface for your asyncio tasks.
+
+Usage example:
+
+```python
+import asyncio
+from aioshutdown import SIGTERM, SIGINT, SIGHUP
+
+
+# The list of the signals, that you want to handle
+with SIGTERM | SIGHUP | SIGINT as loop:
+    # The list of your tasks
+    tasks = [loop.create_task(my_task(i)) for i in range(1, 10)]
+    loop.run_forever()
+```
