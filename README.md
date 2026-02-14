@@ -1,32 +1,11 @@
-### Hi there 👋
+## Hi, I'm Ali 👋
 
-🔭 I’m currently working on [aioauth - Asynchronous OAuth 2.0 framework for Python 3](https://github.com/aliev/aioauth)
+I build pragmatic, scalable systems at the intersection of AI and distributed architecture.
 
-🔭 I’m currently working on [baker](https://github.com/aliev/baker)
+Currently working on:
 
-🤔 I’m looking for help with [baker](https://github.com/aliev/baker)
+- 🧠 [Vision Agents](https://github.com/getstream/Vision-Agents) at [Stream](https://github.com/GetStream)
+- 🔐 [aioauth](https://github.com/aliev/aioauth) — Asynchronous OAuth 2.0 framework for Python
+- 🥖 [baker](https://github.com/aliev/baker) — Project templating tool written in Rust
 
----
-
-🔭 I created new library - [aioshutdown](https://github.com/aliev/aioshutdown) the context manager that provides simple graceful shutdown interface for your asyncio tasks.
-
-Usage example:
-
-```python
-import asyncio
-from aioshutdown import SIGTERM, SIGINT, SIGHUP
-
-
-async def my_task(sleep: int):
-    try:
-        ...
-    except asyncio.CancelledError as exc:
-        # Your graceful shutdown logic here
-
-
-# The list of the signals, that you want to handle
-with SIGTERM | SIGHUP | SIGINT as loop:
-    # The list of your tasks
-    tasks = [loop.create_task(my_task(i)) for i in range(1, 10)]
-    loop.run_forever()
-```
+Interests: AI infrastructure · Distributed Systems · Pragmatic Architecture · Open Source
